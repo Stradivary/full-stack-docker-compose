@@ -1,0 +1,12 @@
+version: '3'
+services:
+  server:
+    ports:
+      - "3001:3001"
+    command: npm start
+    build: ./server
+  client:
+    ports:
+      - "3000:80"
+    command: serve -p 80 -s .
+    build: ./client
